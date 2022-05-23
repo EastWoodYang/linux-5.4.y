@@ -131,21 +131,27 @@ static const struct id_table ic_id_table[] = {
 
 	
         /* 8761A */
-	{ IC_INFO(RTL_ROM_LMP_8761A, 0xa, 0x6, HCI_USB),
+	{ IC_INFO(RTL_ROM_LMP_8761A, 0xa),
+	  .hci_ver = 0x6,
+	  .hci_bus = HCI_USB,
 	  .config_needed = false,
 	  .has_rom_version = true,
 	  .fw_name  = "rtl_bt/rtl8761a_fw.bin",
 	  .cfg_name = "rtl_bt/rtl8761a_config" },
 
 	/* 8761B */
-	{ IC_INFO(RTL_ROM_LMP_8761A, 0xb, 0xa, HCI_UART),
+	{ IC_INFO(RTL_ROM_LMP_8761A, 0xb),
+	  .hci_ver = 0xa,
+	  .hci_bus = HCI_UART,
 	  .config_needed = false,
 	  .has_rom_version = true,
 	  .fw_name  = "rtl_bt/rtl8761b_fw.bin",
 	  .cfg_name = "rtl_bt/rtl8761b_config" },
 
 	/* 8761BU */
-	{ IC_INFO(RTL_ROM_LMP_8761A, 0xb, 0xa, HCI_USB),
+	{ IC_INFO(RTL_ROM_LMP_8761A, 0xb),
+	  .hci_ver = 0xa,
+	  .hci_bus = HCI_USB,
 	  .config_needed = false,
 	  .has_rom_version = true,
 	  .fw_name  = "rtl_bt/rtl8761bu_fw.bin",
